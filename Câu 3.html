@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập vào một số nguyên: ");
+    function isPrime(n) {
+        let flag = true;
+        if (n < 2) {
+            flag = false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        document.write(flag);
+    }
+    isPrime(n);
+</script>
+
+</body>
+</html>

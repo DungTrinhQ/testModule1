@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+
+    function input() {
+        do{
+            number = prompt("Nhập số  (Nhập q để kết thúc)");
+            if (number != "q") {
+                array.push(number);
+            }
+        }while(number !== "q");
+    }
+
+    function tryRemoveFromArray(array) {
+        let index = prompt("Nhập vào vị trí cần loại bỏ:");
+        if(index>=0 && index < array.length){
+            array.splice(index,1);
+            document.write(array);
+        }
+        else {
+            document.write(array);
+        }
+    }
+
+    input();
+    tryRemoveFromArray(array);
+</script>
+
+</body>
+</html>

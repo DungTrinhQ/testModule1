@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let score = new Array();
+
+    function input() {
+        do{
+            number = prompt("Nhập số điểm (Nhập q để kết thúc)");
+            if (number != "q") {
+                score.push(number);
+            }
+        }while(number !== "q");
+    }
+
+    function findMinScore(score){
+        let min = score[0];
+        for(let i = 0; i < score.length; i++ ){
+            if(score[i] < min){
+                min = score[i];
+            }
+        }
+        document.write("Điểm số thấp nhất là: "+min);
+    }
+    input();
+    findMinScore(score);
+</script>
+
+</body>
+</html>
